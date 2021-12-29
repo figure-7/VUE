@@ -1,0 +1,6 @@
+如果用内网需要先进行配置代理，否则会下载超时
+配置代理无效的话查看网络代理，如果有：
+cmd分别运行：
+npm config set proxy=http://10.22.35.21:8080（代理：10.22.35.21，端口：8080）
+npm config set registry=http://registry.npmjs.org
+之后就可以正常npm install了

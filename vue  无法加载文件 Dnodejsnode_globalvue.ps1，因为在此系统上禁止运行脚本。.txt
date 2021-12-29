@@ -1,0 +1,13 @@
+执行下面语句：
+PS C:\Users\Administrator\Desktop\test> get-ExecutionPolicy
+Restricted
+PS C:\Users\Administrator\Desktop\test> set-ExecutionPolicy RemoteSigned
+PS C:\Users\Administrator\Desktop\test> get-ExecutionPolicy
+RemoteSigned
+
+
+Set-ExecutionPolicy修改PowerShell中执行策略的用户首选项(preference). 执行策略是Windows PowerShell安全策略中的一部分. 它将决定你是否可以载入配置文件(包括你的Windows PowerShell profile文件)和运行脚本, 它将会在运行前确定哪些文件必须具有数字签名(digitally signed)
+· Restricted: 不载入配置文件, 不执行脚本. "Restricted"是默认值.
+· AllSigned: 所有的配置文件和脚本必须通过信任的出版商签名(trusted publisher), 这里所指的脚本页包括你在本地计算机上创建的脚本.
+· RemoteSigned: 所有从互联网上下载的脚本必须通过信任的出版商签名(trusted publisher).
+· Unrestricted: 载入所有的配置文件和脚本. 如果你运行了一个从互联网上下载且没有数字签名的脚本, 在执行前你都会被提示是否执行.

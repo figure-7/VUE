@@ -1,0 +1,6 @@
+主要原因是在安装过程中，chromedrive_win32安装包损坏
+先去官网下载当前chromedriver_win32.zip (2.46版本)的压缩包,地址http://chromedriver.storage.googleapis.com/index.html
+然后解压放在vue所给出提示的目录中
+但是重新下载无法解决
+在替换情况下，后还是没无法达到成功界面，则用这条命令：npm install chromedriver --chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver
+
